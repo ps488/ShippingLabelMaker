@@ -1,0 +1,21 @@
+<div class="container" >
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+      </div>
+      <br>
+    <h3> 
+        Please enter the weight of the package
+    </h3>
+    <br>
+    <form>
+        <div class="form-group row">
+          <label for="staticEmail" for="name" class="col-sm-1 col-form-label">Weight <sup>*</sup></label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="inputName" required name="weight" placeholder="lbs" value="{{shippingData.weight}}" [(ngModel)]="shippingData.weight"> 
+          </div>
+        </div>
+      </form>
+  </div>
+  
+  
+  

@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+      </div>
+      <br>
+    <h3> 
+        Enter the receiver's address
+    </h3>
+    <br>
+    <form>
+        <div class="form-group row">
+          <label for="staticEmail" for="name" class="col-sm-1 col-form-label">Name <sup>*</sup></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="inputName" required name="name" [(ngModel)]="shippingData.receiver.name"> 
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputStreet" class="col-sm-1 col-form-label">Street <sup>*</sup></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="inputStreet" required name="street" [(ngModel)]="shippingData.receiver.street">
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputStreet" class="col-sm-1 col-form-label">City <sup>*</sup></label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="inputCity" name="city"  [(ngModel)]="shippingData.receiver.city">
+            </div>
+            <label for="inputStreet" class="col-sm-1 col-form-label">State <sup>*</sup></label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="inputState" name="state" [(ngModel)]="shippingData.receiver.state">
+            </div>
+            <label for="inputStreet" class="col-sm-1 col-form-label">Zip <sup>*</sup></label>
+            <div class="col-sm-2">
+              <input type="number" class="form-control" id="inputZip" name="zip" [(ngModel)]="shippingData.receiver.zip">
+            </div>
+          </div>
+      </form>
+</div>

@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@media screen{
+    .barCode{
+        display: none;
+    }
+}
+
+
+@media print{
+    h2 {
+     display: none;
+    }
+
+    #shippingDetails{
+        display: none;
+    }
+
+    #prevLink{
+        display: none;
+    }
+
+    #title{
+        display: none;
+    }
+
+    #progress-bar{
+        display: none
+    }
+
+}

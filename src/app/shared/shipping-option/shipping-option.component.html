@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+      aria-valuemin="0" aria-valuemax="100">80%</div>
+  </div>
+  <br>
+  <h3>
+    Choose shipping option
+  </h3>
+  <br>
+  <form>
+    
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="ground" name="ground" value='Ground' [(ngModel)]="shippingData.shippingOptions"
+             mdbInput>
+            <label class="custom-control-label" for="ground">Ground</label>
+          </div>
+          
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="priority" 
+           
+            name="priority" value='Priority' [(ngModel)]="shippingData.shippingOptions" mdbInput>
+            <label class="custom-control-label" for="priority">Priority</label>
+          </div>
+         
+  </form>
+</div>

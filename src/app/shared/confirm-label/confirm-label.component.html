@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="progress">
+    <div id="progress-bar" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%"
+      aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Completed</div>
+  </div>
+  <br>
+  <h3>
+    Shipping confirmation
+  </h3>
+  <br>
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem; height: 15rem">
+            <div class="card-body">
+              <h4>From</h4>
+              <h5 class="card-title">{{shippingData.receiver.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{shippingData.receiver.street}}</h6>
+              <p class="card-text">{{shippingData.receiver.city}} {{shippingData.receiver.state}}
+                {{shippingData.receiver.zip}} </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card" style="width: 18rem; height: 15rem">
+            <div class="card-body">
+                <h4>To</h4>
+              <h5 class="card-title">{{shippingData.sender.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{shippingData.sender.street}}</h6>
+              <p class="card-text">{{shippingData.sender.city}} {{shippingData.sender.state}}
+                {{shippingData.sender.zip}} </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="shippingDetails" class="col print">
+          <h4 >Shipping Details</h4>
+          <h6>Shipping Weight: {{shippingData.weight}} lbs</h6>
+          <h6>Shipping Option : {{shippingData.shippingOptions}} </h6>
+          <button type="button" class="btn btn-outline-primary" (click)="calculateShippingCost()">Calculate Shipping
+            Cost</button>
+            <br><br>
+          <div class="col">
+            <h3>${{shippingCost | number : '1.2-2'}}</h3>
+          </div>
+          <br><br>
+          <button *ngIf="showPrint" type="button" ngs class="btn btn-outline-primary" (click)="printLabel()">Print
+            Shipping Label </button>
+        </div>
+        <div class="barCode">
+          <img src="assets/barcode.gif" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

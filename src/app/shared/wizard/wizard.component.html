@@ -1,0 +1,11 @@
+<br>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-3" id="prevLink">
+      <a [routerLink]="prevLink" routerLinkActive="active" *ngIf="prevLink">PREV</a>
+    </div>
+    <div class="col-sm-3">
+      <a [routerLink]="nextLink" routerLinkActive="active" *ngIf="nextLink"> NEXT</a>
+    </div>
+  </div>
+</div>
